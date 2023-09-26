@@ -47,7 +47,7 @@ brew install powerlevel10k
 
 echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 ```
-... and then close the terminal window and open a new one, and follow the on screen menu for customising the prompt to match your likes. It will be important later on to indicate the cluster and namespace in which you are working. You can always use defaults if you dont have a personal preference on something. Usually first line is the typical choice.
+... and then close the terminal window and open a new one, and follow the on screen menu for customising the prompt to match your likes. It will be important later on, to show the cluster and namespace in which you are working. You can always use defaults if you dont have a personal preference on something. Usually first line is the typical choice.
 
 ![restart iTerm2](image.png)
 
