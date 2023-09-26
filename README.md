@@ -18,7 +18,7 @@ after the installed is done, you need to execute a couple of lines to add it to 
 
 eval "$(/usr/local/bin/brew shellenv)"
 ```
-## Xcode
+## Xcode (OPTIONAL - not initially needed)
 A third tool to keep in consideration are Apple Xcode tools. Do:
 
 ```
@@ -26,7 +26,7 @@ sudo rm -rf /Library/Developer/CommandLineTools
 
 sudo xcode-select --install
 ```
-...and accept the license pop-up.
+...and accept the license pop-up. 
 
 # CLI enhancements 
 ## Framework
