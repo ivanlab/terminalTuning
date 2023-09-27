@@ -1,30 +1,25 @@
-- [Tools](#tools)
-  - [iTerm2](#iterm2)
-  - [Homebrew](#homebrew)
-  - [Xcode (OPTIONAL - not initially needed)](#xcode-optional---not-initially-needed)
-- [CLI enhancements](#cli-enhancements)
-  - [Framework](#framework)
-  - [P10k](#p10k)
-  - [Plugins](#plugins)
-    - [Kubectl](#kubectl)
-    - [zsh-autosuggestions](#zsh-autosuggestions)
-    - [zsh-syntax-highlighting](#zsh-syntax-highlighting)
-  - [Other](#other)
-    - [kubecolor](#kubecolor)
-    - [Autojump](#autojump)
-    - [Exa](#exa)
-  - [K9S](#k9s)
+- [1. Tools](#1-tools)
+  - [1.1. iTerm2](#11-iterm2)
+  - [1.2. Homebrew](#12-homebrew)
+  - [1.3. K9S](#13-k9s)
+  - [1.4. Xcode (OPTIONAL - not initially needed)](#14-xcode-optional---not-initially-needed)
+- [2. CLI enhancements](#2-cli-enhancements)
+  - [2.1. Framework](#21-framework)
+  - [2.2. P10k](#22-p10k)
+  - [2.3. Plugins](#23-plugins)
+    - [2.3.1. Kubectl](#231-kubectl)
+    - [2.3.2. zsh-autosuggestions](#232-zsh-autosuggestions)
+    - [2.3.3. zsh-syntax-highlighting](#233-zsh-syntax-highlighting)
+  - [2.4. Other](#24-other)
+    - [2.4.1. kubecolor](#241-kubecolor)
+    - [2.4.2. Autojump](#242-autojump)
+    - [2.4.3. Exa](#243-exa)
+# 1. Tools
 
-
-
-
-
-# Tools
-
-## iTerm2
+## 1.1. iTerm2
 I guess you are already using iTerm2. If you are not, start by installing it [iterm2.com](https://iterm2.com) and use that instead of terminal.
 
-## Homebrew
+## 1.2. Homebrew
 Also another tool that we will need in the journey is homebrew ([brew.sh](https://brew.sh)). If you dont already have it, just install it by:
 
 ```
@@ -38,7 +33,17 @@ after the installer is done, you need to execute a couple of lines to add it to 
 
 eval "$(/usr/local/bin/brew shellenv)"
 ```
-## Xcode (OPTIONAL - not initially needed)
+
+## 1.3. K9S
+
+The best CLI kubernetes explorer. Install it also with Homebrew:
+```
+brew install derailed/k9s/k9s
+```
+Documentation is [here](https://k9scli.io/topics/commands/)
+
+
+## 1.4. Xcode (OPTIONAL - not initially needed)
 A third tool to keep in consideration are Apple Xcode tools. Do:
 
 ```
@@ -48,8 +53,8 @@ sudo xcode-select --install
 ```
 ...and accept the license pop-up. 
 
-# CLI enhancements 
-## Framework
+# 2. CLI enhancements 
+## 2.1. Framework
 
 Next thing to consider is the installation of a framework. Here we chose [OhMyZsh](https://github.com/ohmyzsh/ohmyzsh). Execute the following:
 
@@ -59,7 +64,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ![Oh-My-Zsh](image-1.png)
 
-## P10k
+## 2.2. P10k
 Now let's add some customization to the prompt with powerlevel10k [P10k](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k). If you just run:
 
 ```
@@ -71,7 +76,7 @@ echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.
 
 ![restart iTerm2](image.png)
 
-## Plugins
+## 2.3. Plugins
 Lets add some plugins to make typing easier. They are all [here](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins), but there is a minimum set recommended.
 
 You can enable the ones you need by editing the  ```~/.zshrc``` file:
@@ -100,7 +105,7 @@ plugins=(git
 Most of them are already inside the plugin directory of your Oh-My-Zsh ($HOME/.oh-my-zsh/plugins/), but some of them need to be downloaded. I'll detail them bellow in a particular section for each.
 
 As a referenceI'm attaching here my full [~/.zshrc](./zshrc)
-### Kubectl
+### 2.3.1. Kubectl
 
 Kubectl autocompletion. This [plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectl#kubectl-plugin) is already downloaded. You just need to enable it on the ~/.zshrc
 
@@ -113,14 +118,14 @@ It gives you a nice set of alias that you can use to shorten your calls to 'kube
 ...
 all the available aliases are listed [here](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectl#kubectl-plugin)
 
-### zsh-autosuggestions
+### 2.3.2. zsh-autosuggestions
 
  You need to download this [plugin](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh) and also declare it in the plugin section of the ~/.zshrc. Download it with:
 
 ```
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
-### zsh-syntax-highlighting
+### 2.3.3. zsh-syntax-highlighting
 
 Declare the [plugin](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md) on your ```~./zshrc``` and exec this also to download it:
 
@@ -128,8 +133,8 @@ Declare the [plugin](https://github.com/zsh-users/zsh-syntax-highlighting/blob/m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-## Other
-### kubecolor
+## 2.4. Other
+### 2.4.1. kubecolor
 
 Install [this](https://github.com/hidetatz/kubecolor) tool with homebrew:
 
@@ -151,7 +156,7 @@ I have several alias in my ~/.zshrc that make my life easier:
 
 ![Alt text](image-3.png)
 
-### Autojump
+### 2.4.2. Autojump
 
 Very useful [tool](https://github.com/wting/autojump#installation), that allows you to jump directly into the directory of your project just using its name.
 
@@ -163,7 +168,7 @@ That also install a wrapper ```j```, so I do very often things like ``` 'j thisP
 
 
 
-### Exa
+### 2.4.3. Exa
 
 Good replacement for 'ls', you can see the alias in the previous picture in my ~/.zshrc. The tool can be found [here](https://github.com/ogham/exa), but you can install it directly with homebrew with:
 
@@ -181,13 +186,4 @@ lt='exa --tree --long --header --classify --icons --group-directories-first --le
 t='exa --tree --header --classify --icons --group-directories-first --level=3'
 ```
 
-
-
-## K9S
-
-The best CLI kubernetes explorer. Install it also with Homebrew:
-```
-brew install derailed/k9s/k9s
-```
-Documentation is [here](https://k9scli.io/topics/commands/)
 
