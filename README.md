@@ -98,6 +98,8 @@ Locate the plugin section, usually like this:
 </p>
 
 These are the ones I've enabled:
+
+
 ```
     plugins=(git
             docker
@@ -111,6 +113,8 @@ These are the ones I've enabled:
             copybuffer
         )
 ```
+
+
 Most of them are already inside the plugin directory of your Oh-My-Zsh ($HOME/.oh-my-zsh/plugins/), but some of them need to be downloaded. I'll detail them bellow in a particular section for each.
 
 As a referenceI'm attaching here my full [~/.zshrc](./zshrc)
