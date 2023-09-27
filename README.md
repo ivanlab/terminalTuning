@@ -66,7 +66,7 @@ Next thing to consider is the installation of a framework. Here we chose [OhMyZs
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-![Oh-My-Zsh](image-1.png){width=100 height=100}
+<img src="image-1.png" width="400"/>
 
 ## 2.2. P10k
 Now let's add some customization to the prompt with powerlevel10k [P10k](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k). If you just run:
@@ -78,7 +78,7 @@ Now let's add some customization to the prompt with powerlevel10k [P10k](https:/
 ```
 ... and then close the terminal window and open a new one, and follow the on screen menu for customising the prompt to match your likes. It will be important later on, to show the cluster and namespace in which you are working. You can always use defaults if you dont have a personal preference on something. Usually first line is the typical choice.
 
-![restart iTerm2](image.png)
+<img alt="restart iTerm2" src="image.png" width="400" />
 
 ## 2.3. Plugins
 Lets add some plugins to make typing easier. They are all [here](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins), but there is a minimum set recommended.
@@ -90,7 +90,7 @@ You can enable the ones you need by editing the  ```~/.zshrc``` file:
 ```
 Locate the plugin section, usually like this:
 
-![.zshrc](image-2.png)
+<img alt=".zshrc" src="image-2.png" width="400" />
 
 These are the ones I've enabled:
 ```
@@ -158,7 +158,7 @@ and add this at the end of your .zshrc
 
 I have several alias in my ~/.zshrc that make my life easier:
 
-![Alt text](image-3.png)
+<img alt="Alt text" src="image-3.png" width="400" />
 
 ### 2.4.2. Autojump
 
