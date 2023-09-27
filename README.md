@@ -42,7 +42,7 @@ after the installer is done, you need to execute a couple of lines to add it to 
 
 The best CLI kubernetes explorer. Install it also with Homebrew:
 ```
-brew install derailed/k9s/k9s
+    brew install derailed/k9s/k9s
 ```
 Documentation is [here](https://k9scli.io/topics/commands/)
 
