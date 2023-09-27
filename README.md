@@ -11,7 +11,7 @@ Also another tool that we will need in the journey is homebrew ([brew.sh](https:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-after the installer is done, you need to execute a couple of lines to add it to your path (replace with your currrent username in the first one)
+after the installer is done, you need to execute a couple of lines to add it to your path (replace with your current username in the first one)
 
 ```
 (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/szigeti/.zprofile
