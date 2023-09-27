@@ -74,7 +74,7 @@ echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.
 ```
 ... and then close the terminal window and open a new one, and follow the on screen menu for customising the prompt to match your likes. It will be important later on, to show the cluster and namespace in which you are working. You can always use defaults if you dont have a personal preference on something. Usually first line is the typical choice.
 
-![restart iTerm2](image.png)
+![restart iTerm2](image.png =x250)
 
 ## 2.3. Plugins
 Lets add some plugins to make typing easier. They are all [here](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins), but there is a minimum set recommended.
