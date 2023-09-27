@@ -66,7 +66,7 @@ Next thing to consider is the installation of a framework. Here we chose [OhMyZs
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-![Oh-My-Zsh](image-1.png)
+![Oh-My-Zsh](image-1.png){width=100 height=100}
 
 ## 2.2. P10k
 Now let's add some customization to the prompt with powerlevel10k [P10k](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k). If you just run:
