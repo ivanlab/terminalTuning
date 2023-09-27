@@ -1,3 +1,23 @@
+- [Tools](#tools)
+  - [iTerm2](#iterm2)
+  - [Homebrew](#homebrew)
+  - [Xcode (OPTIONAL - not initially needed)](#xcode-optional---not-initially-needed)
+- [CLI enhancements](#cli-enhancements)
+  - [Framework](#framework)
+  - [P10k](#p10k)
+  - [Plugins](#plugins)
+    - [Kubectl](#kubectl)
+    - [zsh-autosuggestions](#zsh-autosuggestions)
+    - [zsh-syntax-highlighting](#zsh-syntax-highlighting)
+  - [Other](#other)
+    - [kubecolor](#kubecolor)
+    - [Autojump](#autojump)
+    - [Exa](#exa)
+  - [K9S](#k9s)
+
+
+
+
 
 # Tools
 
