@@ -28,7 +28,7 @@ Also another tool that we will need in the journey is homebrew ([brew.sh](https:
 
 after the installer is done, you need to execute a couple of lines to add it to your path (replace with your current username in the first one)
 
-```
+```(shell)
 (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/szigeti/.zprofile
 
 eval "$(/usr/local/bin/brew shellenv)"
@@ -46,7 +46,7 @@ Documentation is [here](https://k9scli.io/topics/commands/)
 ## 1.4. Xcode (OPTIONAL - not initially needed)
 A third tool to keep in consideration are Apple Xcode tools. Do:
 
-```
+```(shell)
 sudo rm -rf /Library/Developer/CommandLineTools
 
 sudo xcode-select --install
