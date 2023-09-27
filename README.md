@@ -16,6 +16,7 @@
     - [2.4.2. Autojump](#242-autojump)
     - [2.4.3. Exa](#243-exa)
 
+-------
 
 
 # 1. Tools
@@ -124,10 +125,10 @@ Kubectl autocompletion. This [plugin](https://github.com/ohmyzsh/ohmyzsh/tree/ma
 
 It gives you a nice set of alias that you can use to shorten your calls to 'kubectl' commands: 
 
-|Alias|Command|
-|---|---|
-|kaf ... |-> kubectl apply -f ...|
-|kgpo    |-> kubectl get pods|
+| Alias   | Command                 |
+| ------- | ----------------------- |
+| kaf ... | -> kubectl apply -f ... |
+| kgpo    | -> kubectl get pods     |
 ...
 all the available aliases are listed [here](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectl#kubectl-plugin)
 
