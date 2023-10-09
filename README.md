@@ -15,6 +15,7 @@
     - [2.4.1. kubecolor](#241-kubecolor)
     - [2.4.2. Autojump](#242-autojump)
     - [2.4.3. Exa](#243-exa)
+    - [2.4.4. Context and Namespace alias](#244-context-and-namespace-alias)
 
 -------
 
@@ -31,7 +32,7 @@ Also another tool that we will need in the journey is homebrew ([brew.sh](https:
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-after the installer is done, you need to execute a couple of lines to add it to your path (replace with your current username in the first one)
+after the installer is done, you need to execute a couple of lines to add it to your path (_**replace with your current username**_ in the first one)
 
 ```(shell)
     (echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/szigeti/.zprofile
@@ -202,4 +203,12 @@ See some examples of the use [here](https://the.exa.website). Actually when you 
   t='exa --tree --header --classify --icons --group-directories-first --level=3'
 ```
 
+### 2.4.4. Context and Namespace alias
 
+These two alias can also be added to the ```~/.zshrc``` to allow easy change of cluster/namespace:
+
+```
+alias kx='f() { [ "$1" ] && kubectl config use-context $1 || kubectl config current-context ; } ; f'
+
+alias kn='f() { [ "$1" ] && kubectl config set-context --current --namespace $1 || kubectl config view --minify | grep namespace | cut -d" " -f6 ; } ; f'
+```
