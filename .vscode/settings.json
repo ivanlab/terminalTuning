@@ -1,0 +1,12 @@
+{
+    "cSpell.enableFiletypes": [
+        "markdown"
+    ],
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex"
+    ]
+}

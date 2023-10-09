@@ -26,7 +26,7 @@
 I guess you are already using iTerm2. If you are not, start by installing it [iterm2.com](https://iterm2.com) and use that instead of terminal.
 
 ## 1.2. Homebrew
-Also another tool that we will need in the journey is homebrew ([brew.sh](https://brew.sh)). If you dont already have it, just install it by:
+Also another tool that we will need in the journey is homebrew ([brew.sh](https://brew.sh)). If you don't already have it, just install it by:
 
 ```
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -79,7 +79,7 @@ Now let's add some customization to the prompt with powerlevel10k [P10k](https:/
 
     echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 ```
-... and then close the terminal window and open a new one, and follow the on screen menu for customising the prompt to match your likes. It will be important later on, to show the cluster and namespace in which you are working. You can always use defaults if you dont have a personal preference on something. Usually first line is the typical choice.
+... and then close the terminal window and open a new one, and follow the on screen menu for customizing the prompt to match your likes. It will be important later on, to show the cluster and namespace in which you are working. You can always use defaults if you don't have a personal preference on something. Usually first line is the typical choice.
 
 <p align="center">
 <img alt="restart iTerm2" src="image.png" width="400" />
@@ -119,7 +119,7 @@ These are the ones I've enabled:
 
 Most of them are already inside the plugin directory of your Oh-My-Zsh ($HOME/.oh-my-zsh/plugins/), but some of them need to be downloaded. I'll detail them bellow in a particular section for each.
 
-Also, to make the autocompletion works correctly while using the Oh-My-Zsh framework, you need to add the following PATH modification before sourceing the Oh-My-Zsh, as per [here](https://docs.brew.sh/Shell-Completion)
+Also, to make the autocompletion works correctly while using the Oh-My-Zsh framework, you need to add the following PATH modification before sourcing the Oh-My-Zsh, as per [here](https://docs.brew.sh/Shell-Completion)
 
 ```
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -204,7 +204,7 @@ Good replacement for 'ls', you can see the alias in the previous picture in my ~
 ```
     brew install exa
 ```
-See some examples of the use [here](https://the.exa.website). Actually when you add some alias, you dont have to do anything special for using it, it is called everytime you do an ```'ls'```. These are my alias for it on my ```~/.zshrc``` file:
+See some examples of the use [here](https://the.exa.website). Actually when you add some alias, you don't have to do anything special for using it, it is called everytime you do an ```'ls'```. These are my alias for it on my ```~/.zshrc``` file:
 
 ```
   la='exa -a --long --header --classify --icons --group-directories-first'
