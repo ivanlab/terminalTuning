@@ -11,7 +11,7 @@
     - [2.3.1. Kubectl](#231-kubectl)
     - [2.3.2. zsh-autosuggestions](#232-zsh-autosuggestions)
     - [2.3.3. zsh-syntax-highlighting](#233-zsh-syntax-highlighting)
-  - [2.4. Other](#24-other)
+  - [2.4. Other enhancements](#24-other-enhancements)
     - [2.4.1. kubecolor](#241-kubecolor)
     - [2.4.2. Autojump](#242-autojump)
     - [2.4.3. Exa](#243-exa)
@@ -119,7 +119,19 @@ These are the ones I've enabled:
 
 Most of them are already inside the plugin directory of your Oh-My-Zsh ($HOME/.oh-my-zsh/plugins/), but some of them need to be downloaded. I'll detail them bellow in a particular section for each.
 
-As a referenceI'm attaching here my full [~/.zshrc](./zshrc)
+Also, to make the autocompletion works correctly while using the Oh-My-Zsh framework, you need to add the following PATH modification before sourceing the Oh-My-Zsh, as per [here](https://docs.brew.sh/Shell-Completion)
+
+```
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+```
+
+<p align="center">
+<img alt="PATH for Autocomplete" src="image-4.png" width="600" />
+</p>
+
+
+As a reference, this is my full [~/.zshrc](./zshrc) attached
+
 ### 2.3.1. Kubectl
 
 Kubectl autocompletion. This [plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/kubectl#kubectl-plugin) is already downloaded. You just need to enable it on the ~/.zshrc
@@ -148,7 +160,7 @@ Declare the [plugin](https://github.com/zsh-users/zsh-syntax-highlighting/blob/m
     git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
-## 2.4. Other
+## 2.4. Other enhancements
 ### 2.4.1. kubecolor
 
 Install [this](https://github.com/hidetatz/kubecolor) tool with homebrew:
@@ -211,4 +223,11 @@ These two alias can also be added to the ```~/.zshrc``` to allow easy change of 
 alias kx='f() { [ "$1" ] && kubectl config use-context $1 || kubectl config current-context ; } ; f'
 
 alias kn='f() { [ "$1" ] && kubectl config set-context --current --namespace $1 || kubectl config view --minify | grep namespace | cut -d" " -f6 ; } ; f'
+```
+
+But you can also install ```'kubectx' and 'kubens'``` tools described [here](https://github.com/ahmetb/kubectx), which will do the same but also will display a list of the available choices for context and namespace:
+
+```
+brew install kubectx
+
 ```

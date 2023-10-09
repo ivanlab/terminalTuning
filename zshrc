@@ -91,6 +91,9 @@ plugins=(git
         copybuffer
     )
 
+FPATH=$(brew --prefix)/share/zsh-completions:$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -146,21 +149,18 @@ export znt_history_active_text=reverse
 
 RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 
-alias ls="exa -1 --classify --group-directories-first"
-alias ll="exa --long --header --classify --icons --group-directories-first --no-permissions"
-alias lp="exa --long --header --classify --icons --group-directories-first"
-alias la="exa -a --long --header --classify --icons --group-directories-first"
-alias lt="exa --tree --long --header --classify --icons --group-directories-first --level=3"
+alias ls="exa --git -1 --classify --group-directories-first"
+alias ll="exa --git --long --header --classify --icons --group-directories-first --no-permissions"
+alias lp="exa --git --long --header --classify --icons --group-directories-first"
+alias la="exa --git -a --long --header --classify --icons --group-directories-first"
+alias lt="exa --git --tree --long --header --classify --icons --group-directories-first --level=3"
 alias t="exa --tree --header --classify --icons --group-directories-first --level=3"
 alias kctx="kubectx"
 alias kns="kubens"
 
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$(brew --prefix)/share/zsh/site-functions:$FPATH
+alias kx='f() { [ "$1" ] && kubectl config use-context $1 || kubectl config current-context ; } ; f'
+alias kn='f() { [ "$1" ] && kubectl config set-context --current --namespace $1 || kubectl config view --minify | grep namespace | cut -d" " -f6 ; } ; f'
 
-  autoload -Uz compinit
-  compinit
-fi
 export PATH="/opt/homebrew/opt/openssl@3/bin:$PATH"
 export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/opt/openssl@3/lib/
 export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
