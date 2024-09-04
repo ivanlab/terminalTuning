@@ -16,6 +16,7 @@
     - [2.4.2. Autojump](#242-autojump)
     - [2.4.3. Exa](#243-exa)
     - [2.4.4. Context and Namespace alias](#244-context-and-namespace-alias)
+- [3. VIM](#3-vim)
 
 -------
 
@@ -231,3 +232,14 @@ But you can also install ```'kubectx' and 'kubens'``` tools described [here](htt
 brew install kubectx
 
 ```
+# 3. VIM
+
+```git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+sh ~/.vim_runtime/install_awesome_vimrc.sh
+```
+```
+vim ~/.vim_runtime/my_configs.vim
+```
+set mouse=a
+
+
